@@ -1,4 +1,4 @@
-package Exercice1;
+package src.Exercice1;
 
 import checkInputIsInt.CheckIntegerInput;
 

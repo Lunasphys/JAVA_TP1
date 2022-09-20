@@ -5,8 +5,6 @@ import src.Exercice1.exo1;
 import src.Exercice2.exo2;
 
 public class Menu {
-    public Menu() {
-    }
 
     public static void main(String[] args) {
         Scanner console = new Scanner(System.in);
