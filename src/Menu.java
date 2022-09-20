@@ -1,8 +1,7 @@
 package src;
 
 import java.util.Scanner;
-import src.Exercice1.exo1;
-import src.Exercice2.exo2;
+
 
 public class Menu {
     public Menu() {
@@ -16,10 +15,11 @@ public class Menu {
         int value = console.nextInt();
         switch (value) {
             case 1:
-                exo1.main(args);
+                Exercice1.exo1.main(args);
                 break;
             case 2:
-                exo2.main(args);
+                Exercice2.exo2.main(args);
+                break;
         }
 
     }
