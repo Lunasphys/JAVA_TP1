@@ -1,6 +1,6 @@
 package src.Exercice2;
 
-import checkInputIsInt.CheckIntegerInput;
+import src.checkInputIsInt.CheckIntegerInput;
 
 import java.lang.*;
 

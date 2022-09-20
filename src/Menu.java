@@ -13,10 +13,10 @@ public class Menu {
         int value = console.nextInt();
         switch (value) {
             case 1:
-                Exercice1.exo1.main(args);
+                src.Exercice1.exo1.main(args);
                 break;
             case 2:
-                Exercice2.exo2.main(args);
+                src.Exercice2.exo2.main(args);
                 break;
         }
 
