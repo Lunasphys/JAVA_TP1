@@ -4,6 +4,7 @@ import src.Menu;
 
 import java.util.Scanner;
 
+/*
 public class exo3 {
     public static void main(String[] args) {
         System.out.println("Bonjour, que souhaitez-vous faire ?");
@@ -55,3 +56,4 @@ public class exo3 {
 
     }
 }
+*/

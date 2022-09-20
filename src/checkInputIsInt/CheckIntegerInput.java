@@ -48,7 +48,7 @@ public class CheckIntegerInput {
         return str;
     }
 
-    public static boolean isBinary() {
+   /* public static boolean isBinary() {
         Scanner scan = new Scanner(System.in);
         String str = scan.nextLine();
         int bin = str.length();
@@ -109,7 +109,7 @@ public class CheckIntegerInput {
 
         }
         return str;
-    }
+    }*/
 
 }
 
