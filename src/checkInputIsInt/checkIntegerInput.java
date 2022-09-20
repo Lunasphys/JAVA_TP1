@@ -1,5 +1,5 @@
 
-package checkInputIsInt;
+package src.checkInputIsInt;
 import java.util.Scanner;
 
 public class checkIntegerInput {

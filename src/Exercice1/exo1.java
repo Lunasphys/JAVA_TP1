@@ -1,4 +1,6 @@
-import checkInputIsInt.checkIntegerInput;
+package src.Exercice1;
+
+import src.checkInputIsInt.checkIntegerInput;
 
 import java.lang.*;
 
