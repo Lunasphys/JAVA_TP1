@@ -13,12 +13,10 @@ import java.lang.*;
         String egale = "=";
         String etoile = "*";
 
-
             for (int i = 0; i <= largeur ; i++){
                 i++;
                 longueuractuelle = longueuractuelle + 2;
                     System.out.print(egale.repeat((nb * 3 - longueuractuelle + 1 ) / 2) + etoile.repeat(i) + egale.repeat((nb * 3 - longueuractuelle + 1 ) / 2) +  "\n");
-
             }
                 System.out.println(egale.repeat((nb * 3 - 1 )  /  2  ) +  etoile  + egale.repeat((nb * 3 - 1  )  /  2  ));
                 System.out.println(egale.repeat((nb * 3 - 3)  /  2  ) +  etoile.repeat(3)  + egale.repeat((nb * 3 - 3)  /  2  ));
