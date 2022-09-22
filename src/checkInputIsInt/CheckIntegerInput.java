@@ -3,38 +3,42 @@ package src.checkInputIsInt;
 
 import java.util.Scanner;
 
+// @author : Laurie
 public class CheckIntegerInput {
-    public static int entierInt() {
-        Scanner scan = new Scanner(System.in);
-        while (!scan.hasNextInt()) {
-            System.out.println("Rentrez un entier positif");
+    public static int entierInt() { // Permet de savoir si l'input de l'utilisateur est bien un entier
+        Scanner scan = new Scanner(System.in); // Scan l'input
+        while (!scan.hasNextInt()) { // Tant que l'input n'est pas un int, renvoit un message d'erreur et scan le prochain input
+            System.out.println("Rentrez un entier");
             scan.next();
         }
         int nb = scan.nextInt();
-        if (nb < 0) {
+        if (nb < 0) { // Tant que l'input n'est pas un int positif, renvoit un message d'erreur et scan le prochain input
             System.out.println("Veuillez entrez un entier positif");
             return entierInt();
         }
         return nb;
     }
 
-    public static float isFloat() {
-        Scanner scan = new Scanner(System.in);
-        while (!scan.hasNextFloat()) {
-            System.out.println("Rentrez un nombre decimal positif");
-            scan.next();
+    public static boolean isFloat2(String string) { // Bouléen qui permet de verifier si la valeur est bien un nombre decimal
+        float floatValue;
+        System.out.printf("Verification: \"%s\"%n", string);
+        if(string == null || string.equals("")) { // Si la valeur est null ou contient une string vide
+            System.out.println("Ne peut être lu");
+            return false;
         }
-        float nb = scan.nextFloat();
-        if (nb < 0) {
-            System.out.println("Veuillez entrez un nombre decimal positif");
-            return isFloat();
+
+        try { // Si la chaine de caractère est bien un float renvoit : vrai
+            floatValue = Float.parseFloat(string);
+            return true;
+        } catch (NumberFormatException e) { // // Sinon demande de réessayer avec une autre valeur
+            System.out.println("Le nombre saisi n'est pas un nombre decimal, veuillez reessayer");
         }
-        return nb;
+        return false;
     }
 
-    public static String isString() {
+    public static String isString() { // Fonction qui permet de savoir si l'entrée est bien une chaîne de caractère
         Scanner scan = new Scanner(System.in);
-        while (!scan.hasNextLine()) {
+        while (!scan.hasNextLine()) { // Si l'input n'est pas une chaine de caractere (scan la prochaine ligne)
             System.out.println("Rentrez une chaine de caractere");
             scan.next();
         }
@@ -49,11 +53,11 @@ public class CheckIntegerInput {
     }
 
 
-    public static String isBinary() {
+    public static String isBinary() {  // Fonction qui permet de savoir si la chaine de caractère est bien un nombre binaire
         String num;
         Scanner scan = new Scanner(System.in);
-        num = scan.next();
-        while (!num.startsWith("1")) {
+        num = scan.next(); // Permet de rentrer un input
+        while (!num.startsWith("1")) { // Si l'input ne commence pas par un 1
             System.out.println("Rentrez un nombre binaire commencant par 1, composé de 0 et de 1");
             return num;
         }
