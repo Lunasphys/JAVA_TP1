@@ -21,7 +21,12 @@ public class exo3 {
         System.out.println("Bonjour, que souhaitez-vous faire ?");
         System.out.println("1 - Prendre un nombre decimal et le transformer en binaire ?");
         System.out.println("2 - Prendre un nombre binaire et le transformer en decimal ?");
+        System.out.println(("0 pour quitter"));
         int value = utils.entierInt(); // Permet de savoir si l'input est bien un entier positif
+        if (value == 0) {
+            System.out.println("Fin du programme");
+            Menu.main(args);
+        }
         if (value == 1 || value == 2) {
             switch (value) {
                 case 1:

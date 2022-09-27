@@ -25,16 +25,17 @@ public class exo2 {
         }
         int largeur = nb * 2 - 1;
         int longueuractuelle = 0;
-        String egale = "=";
-        String etoile = "*";
+        String egale = ("\033[0m") + "=";
+        String etoile_top = (("\033[0;31m") +  "*");
+        String etoile_bottom = (("\033[0;34m") + "*");
 
         for (int i = 0; i <= largeur; i++) {
             i++;
             longueuractuelle = longueuractuelle + 2;
-            System.out.print(egale.repeat((nb * 3 - longueuractuelle + 1) / 2) + etoile.repeat(i) + egale.repeat((nb * 3 - longueuractuelle + 1) / 2) + "\n");
+            System.out.print(egale.repeat((nb * 3 - longueuractuelle + 1) / 2) + etoile_top.repeat(i) + egale.repeat((nb * 3 - longueuractuelle + 1) / 2) + "\n");
         }
-        System.out.println(egale.repeat((nb * 3 - 1) / 2) + etoile + egale.repeat((nb * 3 - 1) / 2));
-        System.out.println(egale.repeat((nb * 3 - 3) / 2) + etoile.repeat(3) + egale.repeat((nb * 3 - 3) / 2));
+        System.out.println(egale.repeat((nb * 3 - 1) / 2) + etoile_bottom + egale.repeat((nb * 3 - 1) / 2));
+        System.out.println(egale.repeat((nb * 3 - 3) / 2) + etoile_bottom.repeat(3) + egale.repeat((nb * 3 - 3) / 2));
         main(args);
     }
 }
