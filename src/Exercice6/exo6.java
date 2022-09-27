@@ -1,5 +1,6 @@
 package src.Exercice6;
 
+import src.Menu;
 import src.Utils.utils;
 
 import java.util.Arrays;
@@ -21,7 +22,10 @@ public class exo6 {
         //Écrire un programme qui demande à l'utilisateur de taper le contenu d'un tableau de réels de 3 lignes et 3 colonnes et qui affiche ce tableau mais en affichant la moyenne des éléments de chaque ligne, de chaque colonne.
         System.out.println("Entrez la taille du tableau (0 pour quitter)");
         int nb = utils.entierInt();
-
+        if (nb == 0) {
+            System.out.println("Fin du programme");
+            Menu.main(args);
+        }
         double[][] tab = new double[nb][nb];
 
         for (int i = 0; i < nb; i++) {
@@ -58,6 +62,7 @@ public class exo6 {
         }
         System.out.println("La somme des moyennes de chaque ligne est de " + somme_moyenne);
         System.out.println("La somme des moyennes de chaque colonne est de " + somme_moyenne_colonne);
+        main(args);
 
     }
 

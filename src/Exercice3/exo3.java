@@ -31,13 +31,13 @@ public class exo3 {
                     System.out.println("Le nombre binaire de " + nb + " est " + str);
                     System.out.println("Voulez-vous recommencer (1) ou quitter ? (2)");
                     int quit = utils.entierInt(); // Permet de savoir si l'input est bien un entier positif
-                    if (quit == 1 || value == 2) {
+                    if (quit == 1 || quit == 2) {
                         switch (quit) {
                             case 1:
                                 main(args); // Renvoi à l'exercice
                                 break;
                             case 2:
-                                src.Menu.main(args); // Renvoi au menu
+                                Menu.main(args); // Renvoi au menu
                                 break;
                         }
                         break;
@@ -59,5 +59,9 @@ public class exo3 {
                     }
             }
         }
+        else {
+        System.out.println("Veuillez entrer seulement l'un des deux choix");
+        main(args);
+    }
     }
 }

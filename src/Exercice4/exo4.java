@@ -29,5 +29,6 @@ public class exo4 {
         }
 
         System.out.println("U" + nb + " est : " + (double) Math.round(U * 10000) / 10000);
+        main(args);
     }
 }

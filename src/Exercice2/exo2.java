@@ -16,7 +16,7 @@ public class exo2 {
      * @param args Parametre de la ligne de commande(non utilisé)
      */
     public static void main(String[] args) {
-        System.out.println("Rentrez la hauteur de l'arbre");
+        System.out.println("Rentrez la hauteur de l'arbre (0 pour quitter)");
         int nb = utils.entierInt();
         if (nb == 0) {
             //RETOURNER AU MENU NE PAS OUBLIER
@@ -35,6 +35,7 @@ public class exo2 {
         }
         System.out.println(egale.repeat((nb * 3 - 1) / 2) + etoile + egale.repeat((nb * 3 - 1) / 2));
         System.out.println(egale.repeat((nb * 3 - 3) / 2) + etoile.repeat(3) + egale.repeat((nb * 3 - 3) / 2));
+        main(args);
     }
 }
 
