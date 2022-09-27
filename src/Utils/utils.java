@@ -27,8 +27,9 @@ public class utils {
     }
 
     /**
-     *
-     *
+     * @author Laurie Jeham
+     * Méthode qui permet de retourner un bouléen en fonction de la réponse de l'utilisateur.
+     * Elle vérifie que l'entrée ne soit pas un string vide, "null" ou inférieur à 0.
      */
     public static boolean isFloat(String string) { // Bouléen qui permet de verifier si la valeur est bien un nombre decimal
         float floatValue;
