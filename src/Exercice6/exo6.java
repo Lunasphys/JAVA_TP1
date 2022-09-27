@@ -1,6 +1,6 @@
 package src.Exercice6;
 
-import src.checkInputIsInt.CheckIntegerInput;
+import src.Utils.CheckIntegerInput;
 
 import java.util.Arrays;
 
@@ -16,7 +16,7 @@ public class exo6 {
             for (int j = 0; j < nb; j++) {
 
                 System.out.println("Entrez la valeur " + "[" + (i+1) + "," + (j+1) + "]");
-                float entry = CheckIntegerInput.entierInt();
+                float entry = CheckIntegerInput.isFloat();
                 tab[i][j] = entry;
             }
         }
@@ -25,7 +25,6 @@ public class exo6 {
         for (int i = 0; i < nb; i++) {
             for (int j = 0; j < nb; j++) {
                 tab2[i][j] = tab[j][i];
-
             }
         }
         System.out.println(Arrays.deepToString(tab));
@@ -47,9 +46,6 @@ public class exo6 {
         }
         System.out.println("La somme des moyennes de chaque ligne est de " + somme_moyenne);
         System.out.println("La somme des moyennes de chaque colonne est de " + somme_moyenne_colonne);
-
-
-
 
     }
 

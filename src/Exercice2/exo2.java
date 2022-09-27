@@ -1,6 +1,7 @@
 package src.Exercice2;
 
-import src.checkInputIsInt.CheckIntegerInput;
+import src.Menu;
+import src.Utils.CheckIntegerInput;
 
 import java.lang.*;
 
@@ -8,6 +9,11 @@ import java.lang.*;
         public static void main(String[] args) {
         System.out.println("Rentrez la hauteur de l'arbre");
         int nb = CheckIntegerInput.entierInt();
+        if (nb == 0) {
+            //RETOURNER AU MENU NE PAS OUBLIER
+            System.out.println("Fin du programme");
+            Menu.main(args);
+        }
         int largeur = nb * 2 - 1;
         int longueuractuelle = 0;
         String egale = "=";

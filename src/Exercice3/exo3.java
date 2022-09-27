@@ -1,8 +1,7 @@
 package src.Exercice3;
 
 import src.Menu;
-import java.util.Scanner;
-import src.checkInputIsInt.CheckIntegerInput;
+import src.Utils.CheckIntegerInput;
 
 // @author : Laurie
 
@@ -36,7 +35,7 @@ public class exo3 {
                     System.out.println("Quel nombre binaire souhaitez vous prendre ?");
                     String bin = CheckIntegerInput.isBinary(); // Verifie que l'input est bien un nombre binaire
                     System.out.println("Voulez-vous recommencer (1) ou quitter ? (2)");
-                    int out = src.checkInputIsInt.CheckIntegerInput.entierInt(); // Permet de savoir si l'input est bien un entier positif
+                    int out = src.Utils.CheckIntegerInput.entierInt(); // Permet de savoir si l'input est bien un entier positif
                     if (out == 1 || out == 2) {
                         switch (out) {
                             case 1 -> main(args);

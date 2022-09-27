@@ -1,8 +1,7 @@
 package src.Exercice5;
 
-import src.checkInputIsInt.CheckIntegerInput;
+import src.Utils.CheckIntegerInput;
 
-import java.awt.*;
 import java.util.Arrays;
 import java.util.Scanner;
 

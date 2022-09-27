@@ -1,6 +1,6 @@
 package src;
 
-import src.checkInputIsInt.CheckIntegerInput;
+import src.Utils.CheckIntegerInput;
 
 import java.util.Scanner;
 

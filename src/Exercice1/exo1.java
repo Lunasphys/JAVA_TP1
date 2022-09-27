@@ -1,6 +1,7 @@
 package src.Exercice1;
 
-import src.checkInputIsInt.CheckIntegerInput;
+import src.Menu;
+import src.Utils.CheckIntegerInput;
 
 ;
 
@@ -13,7 +14,7 @@ public class exo1 {
         if (nb == 0) {
             //RETOURNER AU MENU NE PAS OUBLIER
             System.out.println("Fin du programme");
-            main(args);
+            Menu.main(args);
         }
         double r = Math.sqrt(nb); // Fonction permetant d'avoir la racine carre en donnant sa valeur
         System.out.println("La racine carre de "+nb+ " est " + r );

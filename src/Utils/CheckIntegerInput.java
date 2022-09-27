@@ -1,5 +1,5 @@
 
-package src.checkInputIsInt;
+package src.Utils;
 
 import java.util.Scanner;
 
@@ -12,6 +12,20 @@ public class CheckIntegerInput {
             scan.next();
         }
         int nb = scan.nextInt();
+        if (nb < 0) { // Tant que l'input n'est pas un int positif, renvoit un message d'erreur et scan le prochain input
+            System.out.println("Veuillez entrez un entier positif");
+            return entierInt();
+        }
+        return nb;
+    }
+
+    public static float isFloat() { // Permet de savoir si l'input de l'utilisateur est bien un entier
+        Scanner scan = new Scanner(System.in); // Scan l'input
+        while (!scan.hasNextInt()) { // Tant que l'input n'est pas un int, renvoit un message d'erreur et scan le prochain input
+            System.out.println("Rentrez un entier");
+            scan.next();
+        }
+        float nb = scan.nextInt();
         if (nb < 0) { // Tant que l'input n'est pas un int positif, renvoit un message d'erreur et scan le prochain input
             System.out.println("Veuillez entrez un entier positif");
             return entierInt();
