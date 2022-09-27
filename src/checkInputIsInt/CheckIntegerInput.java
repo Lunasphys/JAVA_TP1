@@ -22,7 +22,7 @@ public class CheckIntegerInput {
     public static boolean isFloat2(String string) { // Bouléen qui permet de verifier si la valeur est bien un nombre decimal
         float floatValue;
         System.out.printf("Verification: \"%s\"%n", string);
-        if(string == null || string.equals("")) { // Si la valeur est null ou contient une string vide
+        if(string == null || string.equals("") || Float.parseFloat(string) < 0 ) { // Si la valeur est null ou contient une string vide
             System.out.println("Ne peut être lu");
             return false;
         }
