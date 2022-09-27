@@ -1,18 +1,28 @@
 package src.Exercice5;
 
-import src.Utils.CheckIntegerInput;
+import src.Utils.utils;
 
 import java.util.Arrays;
 import java.util.Scanner;
 
-// @author : Laurie
 
+/**
+ * @author Laurie
+ * Class de l'exercice 5
+ * Ecrire et tester une méthode de la classe TP qui calcule la somme des éléments d’un tableau de flottants.
+ * La taille du tableau sera fournie par l’utilisateur
+ */
 public class exo5 {
+    /**
+     * Fonction principale de l'exercice 5
+     *
+     * @param args Parametre de la ligne de commande(non utilisé)
+     */
     public static void main(String[] args) {
         System.out.println("Bienvenue sur le cinquième exercice");
         while (true) {
             System.out.println("Veuillez saisir la taille du tableau (0 pour terminer) : ");
-            int nb = CheckIntegerInput.entierInt(); // Permet de savoir si l'input est bien un entier positif
+            int nb = utils.entierInt(); // Permet de savoir si l'input est bien un entier positif
             if (nb == 0) {
                 src.Menu.main(args); // Renvoie au menu
             }
@@ -25,7 +35,7 @@ public class exo5 {
                 System.out.println("Entrez la valeur n° " + (i + 1));
                 Scanner scan = new Scanner(System.in);
                 String str = scan.next();
-                if (CheckIntegerInput.isFloat2(str)) { // Verifie si l'input donné est bien un float
+                if (utils.isFloat(str)) { // Verifie si l'input donné est bien un float
                     tableau[i] += str;
                     somme += Float.parseFloat(str); // Permet d'additionner chaque décimal dans le tableau
                 } else {

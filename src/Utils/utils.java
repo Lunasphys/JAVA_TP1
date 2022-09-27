@@ -1,10 +1,17 @@
-
 package src.Utils;
 
 import java.util.Scanner;
 
-// @author : Laurie
-public class CheckIntegerInput {
+
+/**
+ * @author : Jeham Laurie And Obry Maxime
+ * Class pour les méthodes utilitaires utilisées dans les exercices
+ */
+public class utils {
+    /**
+     * @author : Jeham Laurie
+     * Methode qui demande un entier à l'utilisateur et renvoie une erreur si ce n'est pas un entier ou si c'est un entier négatif
+     */
     public static int entierInt() { // Permet de savoir si l'input de l'utilisateur est bien un entier
         Scanner scan = new Scanner(System.in); // Scan l'input
         while (!scan.hasNextInt()) { // Tant que l'input n'est pas un int, renvoit un message d'erreur et scan le prochain input
@@ -19,24 +26,14 @@ public class CheckIntegerInput {
         return nb;
     }
 
-    public static float isFloat() { // Permet de savoir si l'input de l'utilisateur est bien un entier
-        Scanner scan = new Scanner(System.in); // Scan l'input
-        while (!scan.hasNextInt()) { // Tant que l'input n'est pas un int, renvoit un message d'erreur et scan le prochain input
-            System.out.println("Rentrez un entier");
-            scan.next();
-        }
-        float nb = scan.nextInt();
-        if (nb < 0) { // Tant que l'input n'est pas un int positif, renvoit un message d'erreur et scan le prochain input
-            System.out.println("Veuillez entrez un entier positif");
-            return entierInt();
-        }
-        return nb;
-    }
-
-    public static boolean isFloat2(String string) { // Bouléen qui permet de verifier si la valeur est bien un nombre decimal
+    /**
+     *
+     *
+     */
+    public static boolean isFloat(String string) { // Bouléen qui permet de verifier si la valeur est bien un nombre decimal
         float floatValue;
         System.out.printf("Verification: \"%s\"%n", string);
-        if(string == null || string.equals("") || Float.parseFloat(string) < 0 ) { // Si la valeur est null ou contient une string vide
+        if (string == null || string.equals("") || Float.parseFloat(string) < 0) { // Si la valeur est null ou contient une string vide
             System.out.println("Ne peut être lu");
             return false;
         }
@@ -50,6 +47,28 @@ public class CheckIntegerInput {
         return false;
     }
 
+    /**
+     * @author : Obry Maxime
+     * Methode qui demande un float à l'utilisateur et renvoie une erreur si ce n'est pas un float ou si c'est un float négatif
+     */
+    public static float isFloat2() { // Permet de savoir si l'input de l'utilisateur est bien un entier
+        Scanner scan = new Scanner(System.in); // Scan l'input
+        while (!scan.hasNextInt()) { // Tant que l'input n'est pas un int, renvoit un message d'erreur et scan le prochain input
+            System.out.println("Rentrez un entier");
+            scan.next();
+        }
+        float nb = scan.nextInt();
+        if (nb < 0) { // Tant que l'input n'est pas un int positif, renvoit un message d'erreur et scan le prochain input
+            System.out.println("Veuillez entrez un entier positif");
+            return entierInt();
+        }
+        return nb;
+    }
+
+    /**
+     * @author Jeham Laurie
+     * Methode qui demande un string à l'utilisateur et renvoie une erreur si ce n'est pas un string et si la chaine de caractère est vide
+     */
     public static String isString() { // Fonction qui permet de savoir si l'entrée est bien une chaîne de caractère
         Scanner scan = new Scanner(System.in);
         while (!scan.hasNextLine()) { // Si l'input n'est pas une chaine de caractere (scan la prochaine ligne)
@@ -67,6 +86,10 @@ public class CheckIntegerInput {
     }
 
 
+    /**
+     * @author Jeham Laurie
+     * Methode qui verifie si l'input de l'utilisateur qui est un entier est bien binaire et renvoie une erreur si ce n'est pas le cas
+     */
     public static String isBinary() {  // Fonction qui permet de savoir si la chaine de caractère est bien un nombre binaire
         String num;
         Scanner scan = new Scanner(System.in);
@@ -75,7 +98,7 @@ public class CheckIntegerInput {
             System.out.println("Rentrez un nombre binaire commencant par 1, composé de 0 et de 1");
             return num;
         }
-            if (num.matches("[01]+") && num.startsWith("1")) {     // Regarde si l'input contient bien 0 et 1 et s'il ne commence pas avec un 0
+        if (num.matches("[01]+") && num.startsWith("1")) {     // Regarde si l'input contient bien 0 et 1 et s'il ne commence pas avec un 0
             System.out.println("Votre input est bien un nombre binaire");
             String str3 = String.valueOf(Integer.parseInt(num, 2));
             System.out.println("Le nombre decimal du nombre binaire " + num + " est " + str3);
