@@ -47,6 +47,7 @@ public class Menu {
                     break;
         }
                 System.out.println("Veuillez entrer un nombre entre 1 et 6");
+                Menu.main(args);
                 break;
         }
 
