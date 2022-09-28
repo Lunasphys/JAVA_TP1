@@ -19,9 +19,10 @@ public class exo3 {
      */
     public static void main(String[] args) {
         System.out.println("Bonjour, que souhaitez-vous faire ?");
+        System.out.println(("0 - Pour quitter"));
         System.out.println("1 - Prendre un nombre decimal et le transformer en binaire ?");
         System.out.println("2 - Prendre un nombre binaire et le transformer en decimal ?");
-        System.out.println(("0 pour quitter"));
+
         int value = utils.entierInt(); // Permet de savoir si l'input est bien un entier positif
         if (value == 0) {
             System.out.println("Fin du programme");
@@ -33,7 +34,7 @@ public class exo3 {
                     System.out.println("Quel nombre souhaitez vous prendre ?");
                     int nb = utils.entierInt(); // Permet de savoir si l'input est bien un entier positif
                     String str = Integer.toBinaryString(nb); // Permet de scanner l'input d'un entier positif et le transformer en nombre binaire
-                    System.out.println("Le nombre binaire de " + nb + " est " + str);
+                    System.out.println("Le nombre décimale du nombre binaire " + nb + " est " + str);
                     System.out.println("Voulez-vous recommencer (1) ou quitter ? (2)");
                     int quit = utils.entierInt(); // Permet de savoir si l'input est bien un entier positif
                     if (quit == 1 || quit == 2) {
