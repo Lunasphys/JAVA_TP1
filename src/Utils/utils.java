@@ -103,6 +103,9 @@ public class utils {
             System.out.println("Votre input est bien un nombre binaire");
             String str3 = String.valueOf(Integer.parseInt(num, 2));
             System.out.println("Le nombre decimal du nombre binaire " + num + " est " + str3);
+        } else {
+            System.out.println("Rentrez un nombre binaire commencant par 1, composé de 0 et de 1");
+            return num;
         }
         return num;
     }
