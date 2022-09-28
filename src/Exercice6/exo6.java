@@ -4,6 +4,7 @@ import src.Menu;
 import src.Utils.utils;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 
 /**
@@ -32,8 +33,13 @@ public class exo6 {
             for (int j = 0; j < nb; j++) {
 
                 System.out.println("Entrez la valeur " + "[" + (i + 1) + "," + (j + 1) + "]");
-                float entry = utils.isFloat2();
-                tab[i][j] = entry;
+                Scanner scan = new Scanner(System.in);
+                String entry = scan.next();
+                if (utils.isFloat2(entry)){
+                    tab[i][j] = Double.parseDouble(entry);
+                } else {
+                    j--;
+                }
             }
         }
         double[][] tab2 = new double[nb][nb];

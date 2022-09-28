@@ -52,18 +52,22 @@ public class utils {
      * @author : Obry Maxime
      * Methode qui demande un float à l'utilisateur et renvoie une erreur si ce n'est pas un float ou si c'est un float négatif
      */
-    public static float isFloat2() { // Permet de savoir si l'input de l'utilisateur est bien un entier
-        Scanner scan = new Scanner(System.in); // Scan l'input
-        while (!scan.hasNextInt()) { // Tant que l'input n'est pas un int, renvoit un message d'erreur et scan le prochain input
-            System.out.println("Rentrez un entier");
-            scan.next();
+    public static boolean isFloat2(String string) { // Bouléen qui permet de verifier si la valeur est bien un nombre decimal
+        float floatValue;
+        try { Float.parseFloat(string); } catch
+        (NumberFormatException e){
+                System.out.println("rentrez un float ou un entier");
+        {
+            return false;
         }
-        float nb = scan.nextInt();
-        if (nb < 0) { // Tant que l'input n'est pas un int positif, renvoit un message d'erreur et scan le prochain input
-            System.out.println("Veuillez entrez un entier positif");
-            return entierInt();
         }
-        return nb;
+        try { // Si la chaine de caractère est bien un float renvoit : vrai
+            floatValue = Float.parseFloat(string);
+            return true;
+        } catch (NumberFormatException e) { // // Sinon demande de réessayer avec une autre valeur
+            System.out.println("Ceci n'est pas un entier ou un float positif");
+        }
+        return false;
     }
 
     /**
