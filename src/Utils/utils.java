@@ -53,16 +53,13 @@ public class utils {
      * Methode qui demande un float à l'utilisateur et renvoie une erreur si ce n'est pas un float ou si c'est un float négatif
      */
     public static boolean isFloat2(String string) { // Bouléen qui permet de verifier si la valeur est bien un nombre decimal
-        float floatValue;
-        try { Float.parseFloat(string); } catch
-        (NumberFormatException e){
-                System.out.println("rentrez un float ou un entier");
-        {
-            return false;
-        }
-        }
+
         try { // Si la chaine de caractère est bien un float renvoit : vrai
-            floatValue = Float.parseFloat(string);
+            float floatValue = Float.parseFloat(string);
+            if (floatValue < 0) {
+                System.out.println("Veuillez entrez un float positif");
+                return false;
+            }
             return true;
         } catch (NumberFormatException e) { // // Sinon demande de réessayer avec une autre valeur
             System.out.println("Ceci n'est pas un entier ou un float positif");
@@ -99,18 +96,13 @@ public class utils {
         String num;
         Scanner scan = new Scanner(System.in);
         num = scan.next(); // Permet de rentrer un input
-        while (!num.startsWith("1")) { // Si l'input ne commence pas par un 1
+        while (!num.matches("[01]+") || !num.startsWith("1")) { // Si l'input ne commence pas par un 1
             System.out.println("Rentrez un nombre binaire commencant par 1, composé de 0 et de 1");
-            return num;
+            num = scan.next();
         }
-        if (num.matches("[01]+") && num.startsWith("1")) {     // Regarde si l'input contient bien 0 et 1 et s'il ne commence pas avec un 0
-            System.out.println("Votre input est bien un nombre binaire");
-            String str3 = String.valueOf(Integer.parseInt(num, 2));
-            System.out.println("Le nombre decimal du nombre binaire " + num + " est " + str3);
-        } else {
-            System.out.println("Rentrez un nombre binaire commencant par 1, composé de 0 et de 1");
-            return num;
-        }
+        System.out.println("Votre input est bien un nombre binaire");
+        String str3 = String.valueOf(Integer.parseInt(num, 2));
+        System.out.println("Le nombre decimal du nombre binaire " + num + " est " + str3);
         return num;
     }
 }

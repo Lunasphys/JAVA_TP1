@@ -28,7 +28,7 @@ public class exo5 {
             }
             String[] tableau = new String[nb]; // Crée un tableau de string de la taille de l'input donné
             System.out.println("La taille de votre tableau est de " + nb);
-            System.out.println("Saisissez les floats que vous souhaitez integrer dans votre nouveau tableau ");
+            System.out.println("Saisissez les floats ou les ints que vous souhaitez integrer dans votre nouveau tableau ");
             float somme = 0;
             Arrays.fill(tableau, ""); // Permet d'enlever la string "null" sur chaque index
             for (int i = 0; i <= tableau.length - 1; i++) { // Boucle qui permet d'ajouter chaque nouveau float au tableau
