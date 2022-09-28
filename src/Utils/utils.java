@@ -34,7 +34,7 @@ public class utils {
     public static boolean isFloat(String string) { // Bouléen qui permet de verifier si la valeur est bien un nombre decimal
         float floatValue;
         System.out.printf("Verification: \"%s\"%n", string);
-        if (string == null || string.equals("") || Float.parseFloat(string) < 0) { // Si la valeur est null ou contient une string vide
+        if (string == null || string.equals("") ) { // Si la valeur est null ou contient une string vide
             System.out.println("Ne peut être lu");
             return false;
         }
@@ -44,8 +44,8 @@ public class utils {
             return true;
         } catch (NumberFormatException e) { // // Sinon demande de réessayer avec une autre valeur
             System.out.println("Le nombre saisi n'est pas un nombre decimal, veuillez reessayer");
+            return false;
         }
-        return false;
     }
 
     /**
